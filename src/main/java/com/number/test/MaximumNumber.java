@@ -1,6 +1,4 @@
 package com.number.test;
-
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class MaximumNumber<T extends Comparable<T>> {
@@ -31,7 +29,13 @@ public class MaximumNumber<T extends Comparable<T>> {
 
     public T maximum(T ... params){
         Arrays.sort(params);
-        return (T) params[params.length-1];
+        int size=params.length-1;
+        print(params[size]);
+        return (T) params[size];
+    }
+
+    public void print(T t){
+        System.out.println(t);
     }
 
 }

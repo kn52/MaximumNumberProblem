@@ -90,5 +90,12 @@ public class MaximumNumberTest {
         String maximum= (String) maxNumber.maximum("as","qwe","zxcv","rst");
         Assert.assertEquals("zxcv",maximum);
     }
+
+    @Test
+    public void givenMoreThan_ThreeString_ShouldReturn_PrintMaxString() {
+        maxNumber=new MaximumNumber();
+        String maximum= (String) maxNumber.maximum("as","qwe","zxcv","rst");
+        Assert.assertEquals("zxcv",maximum);
+    }
 }
 
