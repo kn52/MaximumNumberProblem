@@ -6,62 +6,67 @@ import org.junit.Test;
 
 public class MaximumNumberTest {
     MaximumNumber maxNumber;
-    @Before
-    public void setUp() throws Exception{
-        maxNumber=new MaximumNumber();
-    }
 
     @Test
     public void givenFirstIntegerNumber_IsGreater_ShouldReturn_FirstNumber() {
-        int maximum=maxNumber.getMaximum(8,4,5);
+        maxNumber=new MaximumNumber(8,4,5);
+        int maximum= (int) maxNumber.getMax();
         Assert.assertEquals(8,maximum);
     }
 
     @Test
     public void givenSecondIntegerNumber_IsGreater_ShouldReturn_SecondNumber() {
-        int maximum=maxNumber.getMaximum(6,9,3);
+        maxNumber=new MaximumNumber(6,9,3);
+        int maximum= (int) maxNumber.getMax();
         Assert.assertEquals(9,maximum);
     }
 
     @Test
     public void givenThirdIntegerNumber_IsGreater_ShouldReturn_ThirdNumber() {
-        int maximum=maxNumber.getMaximum(3,4,7);
+        maxNumber=new MaximumNumber(3,4,7);
+        int maximum= (int) maxNumber.getMax();
         Assert.assertEquals(7,maximum);
     }
 
     @Test
     public void givenFirstFloatNumber_IsGreater_ShouldReturn_FirstNumber() {
-        float maximum=maxNumber.getMaximum(8.7f,4.6f,5.5f);
+        maxNumber=new MaximumNumber(8.7f,4.6f,5.5f);
+        float maximum= (float) maxNumber.getMax();
         Assert.assertEquals(8.7f,maximum,0.0);
     }
 
     @Test
     public void givenSecondFloatNumber_IsGreater_ShouldReturn_SecondNumber() {
-        float maximum=maxNumber.getMaximum(6.5f,9.9f,3.1f);
+        maxNumber=new MaximumNumber(6.5f,9.9f,3.1f);
+        float maximum= (float) maxNumber.getMax();
         Assert.assertEquals(9.9f,maximum,0.0);
     }
 
     @Test
     public void givenThirdFloatNumber_IsGreater_ShouldReturn_ThirdNumber() {
-        float maximum=maxNumber.getMaximum(3.2f,4.6f,7.2f);
+        maxNumber=new MaximumNumber(3.2f,4.6f,7.2f);
+        float maximum= (float) maxNumber.getMax();
         Assert.assertEquals(7.2f,maximum,0.0);
     }
 
     @Test
     public void givenFirstString_IsGreater_ShouldReturn_FirstString() {
-        String maximum=maxNumber.getMaximum("zxcv","qwe","as");
+        maxNumber=new MaximumNumber("zxcv","qwe","as");
+        String maximum= (String) maxNumber.getMax();
         Assert.assertEquals("zxcv",maximum);
     }
 
     @Test
     public void givenSecondString_IsGreater_ShouldReturn_SecondString() {
-        String maximum=maxNumber.getMaximum("qwe","zxcv","as");
+        maxNumber=new MaximumNumber("qwe","zxcv","as");
+        String maximum= (String) maxNumber.getMax();
         Assert.assertEquals("zxcv",maximum);
     }
 
     @Test
     public void givenThirdString_IsGreater_ShouldReturn_ThirdString() {
-        String maximum=maxNumber.getMaximum("as","qwe","zxcv");
+        maxNumber=new MaximumNumber("as","qwe","zxcv");
+        String maximum= (String) maxNumber.getMax();
         Assert.assertEquals("zxcv",maximum);
     }
 }
