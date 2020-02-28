@@ -46,5 +46,23 @@ public class MaximumNumberTest {
         float maximum=maxNumber.getMaximum(3.2f,4.6f,7.2f);
         Assert.assertEquals(7.2f,maximum,0.0);
     }
+
+    @Test
+    public void givenFirstString_IsGreater_ShouldReturn_FirstString() {
+        String maximum=maxNumber.getMaximum("zxcv","qwe","as");
+        Assert.assertEquals("zxcv",maximum);
+    }
+
+    @Test
+    public void givenSecondString_IsGreater_ShouldReturn_SecondString() {
+        String maximum=maxNumber.getMaximum("qwe","zxcv","as");
+        Assert.assertEquals("zxcv",maximum);
+    }
+
+    @Test
+    public void givenThirdString_IsGreater_ShouldReturn_ThirdString() {
+        String maximum=maxNumber.getMaximum("as","qwe","zxcv");
+        Assert.assertEquals("zxcv",maximum);
+    }
 }
 
