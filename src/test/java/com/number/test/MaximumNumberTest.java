@@ -69,5 +69,26 @@ public class MaximumNumberTest {
         String maximum= (String) maxNumber.getMax();
         Assert.assertEquals("zxcv",maximum);
     }
+
+    @Test
+    public void givenMoreThan_ThreeIntegerNumber_ShouldReturn_MaxNumber() {
+        maxNumber=new MaximumNumber();
+        int maximum= (int) maxNumber.maximum(8,4,1,5);
+        Assert.assertEquals(8,maximum);
+    }
+
+    @Test
+    public void givenMoreThan_ThreeFloatNumber_ShouldReturn_MaxNumber() {
+        maxNumber=new MaximumNumber();
+        float maximum= (float) maxNumber.maximum(3.2f,4.6f,2.2f,7.2f);
+        Assert.assertEquals(7.2f,maximum,0.0);
+    }
+
+    @Test
+    public void givenMoreThan_ThreeString_ShouldReturn_MaxString() {
+        maxNumber=new MaximumNumber();
+        String maximum= (String) maxNumber.maximum("as","qwe","zxcv","rst");
+        Assert.assertEquals("zxcv",maximum);
+    }
 }
 

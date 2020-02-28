@@ -1,5 +1,8 @@
 package com.number.test;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class MaximumNumber<T extends Comparable<T>> {
     T first;
     T second;
@@ -10,6 +13,8 @@ public class MaximumNumber<T extends Comparable<T>> {
         this.second = second;
         this.third = third;
     }
+
+    public MaximumNumber() { }
 
     public static <T extends Comparable<T>> T getMaximum(T x, T y, T z) {
         if(x.compareTo(y)>0 && x.compareTo(z)>0)
@@ -24,5 +29,9 @@ public class MaximumNumber<T extends Comparable<T>> {
 
     }
 
+    public T maximum(T ... params){
+        Arrays.sort(params);
+        return (T) params[params.length-1];
+    }
 
 }
